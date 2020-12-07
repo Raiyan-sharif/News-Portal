@@ -1,3 +1,3 @@
 # News-Portal
-# docker buid -t newsportal-app
-#docker run -it --rm --name
+# docker build -t newsportal-app .
+# docker run -it --rm --name newsportal-php-app newsportal-app
