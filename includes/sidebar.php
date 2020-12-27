@@ -24,12 +24,12 @@
                 <!-- Blog Categories Well -->
                 <div class="well">
                 <?php  
-                        $query = "SELECT * FROM categories";
+                        $query = "SELECT * FROM categories LIMIT 12";
                         $get_all_catergories_query = mysqli_query($connection,$query);
                     ?>
                     <h4>Blog Categories</h4>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <ul class="list-unstyled">
                                 <?php
                                 while($row = mysqli_fetch_assoc($get_all_catergories_query)){
@@ -39,20 +39,7 @@
                                 ?>
                             </ul>
                         </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
+                        <!-- /.col-lg-12 -->
                     </div>
                     <!-- /.row -->
                 </div>
