@@ -1,33 +1,100 @@
-<?php include "includes/header.php" ?>
-    <div id="wrapper">
-        <!-- Navigation -->
-    <?php include "includes/navigation.php" ?>
+<?php
+ session_start();
+include('includes/config.php');
+if(isset($_POST['login']))
+  {
+     $uname=$_POST['username'];
+    $password=$_POST['password'];
+$sql =mysqli_query($con,"SELECT AdminUserName,AdminEmailId,AdminPassword FROM tbladmin WHERE (AdminUserName='$uname' and AdminPassword='$password')");
+ $num=mysqli_fetch_array($sql);
+if($num>0)
+{
+	$_SESSION['login']=$_POST['username'];
+    echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
+}
+else{
+echo "<script>alert('User not registered with us');</script>";
+  }
+ 
+}
+?>
 
-        <div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="News Portal.">
+        <meta name="author" content="PHPGurukul">
+        <title>News Portal | Admin Panel</title>
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    </head>
 
-            <div class="container-fluid">
 
-                <!-- Page Heading -->
+    <body class="bg-transparent">
+        <section>
+            <div class="container-alt">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                        Welcome to admin
-                            <small>Author</small>
-                        </h1>
-                        <!-- <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> Blank Page
-                            </li>
-                        </ol> -->
-                    </div>
-                </div>
-                <!-- /.row -->
+                    <div class="col-sm-12">
 
+                        <div class="wrapper-page">
+
+                            <div class="m-t-40 account-pages">
+                                <div class="text-center account-logo-box">
+                                    <h2 class="text-uppercase">
+                                        <a href="index.html" class="text-success">
+                                            <span><img src="assets/images/logo.png" alt="" height="56"></span>
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div class="account-content">
+                                    <form class="form-horizontal" method="post">
+
+                                        <div class="form-group ">
+                                            <div class="col-xs-12">
+                                                <input class="form-control" type="text" required="" name="username" placeholder="Username" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <input class="form-control" type="password" name="password" required="" placeholder="Password" autocomplete="off">
+                                            </div>
+                                        </div>                   
+                                        <div class="form-group account-btn text-center m-t-10">
+                                            <div class="col-xs-12">
+                                                <button class="btn w-md btn-bordered btn btn-primary waves-effect waves-light" type="submit" name="login">Log In</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                    <div class="clearfix"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
             </div>
-            <!-- /.container-fluid -->
-             
-        <!-- /#page-wrapper -->
-        <?php include "includes/footer.php" ?>
+          </section>
+        <script>
+            var resizefunc = [];
+        </script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+    </body>
+</html>

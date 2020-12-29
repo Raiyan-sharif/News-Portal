@@ -1,52 +1,44 @@
-<div class="col-md-4">
+  <div class="col-md-4">
+          <!-- Categories Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Categories</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+<?php $query=mysqli_query($con,"select id,CategoryName from tblcategory");
+while($row=mysqli_fetch_array($query))
+{
+?>
 
-
-                
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <form action="search.php" method="post">
-                    <div class="input-group">
-                        <input name="search" type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button name="submit" class="btn btn-default" type="submit">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-
-                    </form> <!-- serrch form-->
-                    <!-- /.input-group -->
+                    <li>
+                      <a href="category.php?catid=<?php echo htmlentities($row['id'])?>"><?php echo htmlentities($row['CategoryName']);?></a>
+                    </li>
+<?php } ?>
+                  </ul>
                 </div>
-
-
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                <?php  
-                        $query = "SELECT * FROM categories LIMIT 12";
-                        $get_all_catergories_query = mysqli_query($connection,$query);
-                    ?>
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <ul class="list-unstyled">
-                                <?php
-                                while($row = mysqli_fetch_assoc($get_all_catergories_query)){
-                                    $cat_title = $row['cat_title'];
-                                    echo "<li> <a href = '#'>{$cat_title}</a></li>";
-                                }
-                                ?>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-12 -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-
-                <!-- Side Widget Well -->
-                <?php include "widget.php" ?>
-
+       
+              </div>
             </div>
+          </div>
+
+          <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Recent News</h5>
+            <div class="card-body">
+                      <ul class="mb-0">
+<?php
+$query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId limit 8");
+while ($row=mysqli_fetch_array($query)) {
+
+?>
+
+  <li>
+                      <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
+                    </li>
+            <?php } ?>
+          </ul>
+            </div>
+          </div>
 
         </div>
