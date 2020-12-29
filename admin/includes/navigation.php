@@ -37,15 +37,15 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-desktop"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts_dropdown" class="collapse">
                             <li>
-                                <a href="#">View Post</a>
+                                <a href="posts.php">View Post</a>
                             </li>
                             <li>
-                                <a href="#">Add Post</a>
-                            </li>
+                                <a href="posts.php?source=add_post">Add Post</a>
+                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Categories</a>
+                        <a href="categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
                     </li>
                     <li class="active">
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Comments</a>
