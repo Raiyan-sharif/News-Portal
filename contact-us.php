@@ -30,17 +30,13 @@
 
         <div class="col-lg-12">
 
-          <p>
-              Contact us  Contact us  Contact us  Contact us  Contact us 
-               Contact us  Contact us  Contact us  Contact us  Contact us 
-                Contact us  Contact us  Contact us  Contact us  Contact us 
-                 Contact us  Contact us  Contact us  Contact us  Contact us 
-                  Contact us  Contact us  Contact us  Contact us  Contact us 
-                   Contact us  Contact us  Contact us  Contact us  Contact us 
-                    Contact us  Contact us  Contact us  Contact us  Contact us 
-                     Contact us  Contact us  Contact us  Contact us  Contact us 
-                      Contact us  Contact us  Contact us  Contact us  Contact us  Contact us 
-                       Contact us  Contact us  Contact us  Contact us  Contact us 
+          <p class="text-center text-info">
+          <br/><br/><br/><br/><br/><br/>
+          Address: Suhrawardi Udyan Rd, Dhaka 1200 <br/><br/>
+            Contact No: 01779-482994 <br/><br/>
+            Email: iit@du.ac.bd<br/><br/>
+            Website: http://www.iit.du.ac.bd
+            <br/><br/><br/><br/><br/><br/>
           </p>
         </div>
       </div>

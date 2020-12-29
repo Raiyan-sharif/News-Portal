@@ -38,16 +38,18 @@
 
         <div class="col-lg-12">
 
-          <p>about aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout
-          aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout</p>
+          <p class="text-center text-info">
+          Subject:<br/>
+          [MIT 305]Web Technology<br/><br/>
+          Date:<br/>29.12.2020<br/><br/>Project Topic:<br/>News Portal<br/><br/>Submitted To:<br/><br/>Dr. Mohammed Shafiul Alam Khan<br/>
+          Associate Professor and Director, DU IIT<br/><br/><br/>
+Submitted By:<br/><br/><br/>
+Md Sajidul Alam  [192109]<br/><br/>
+Raiyan Sharif  [192122]<br/><br/>
+Taslima Kabir Suchona  [192139]<br/><br/>
+Sumana Rahman Supti [192101]<br/><br/>
+
+</p>
         </div>
       </div>   
     </div>
