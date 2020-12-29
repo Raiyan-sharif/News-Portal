@@ -18,6 +18,17 @@
         $post_date = $row['post_date'];
         $post_content = $row['post_content'];
     }
+    if(isset($_POST['update_post'])){
+        $post_title = $_POST['title'];
+        $post_category = $_POST['post_category'];
+        $post_author = $_POST['author'];
+        $post_status = $_POST['post_status'];
+        $post_image = $_FILES['image']['name'];
+        $post_image_temp = $_FILES['image']['temp_name'];
+        $post_content = $_POST['post_content'];
+        $post_tags = $_POST['post_tags'];
+        move_uploaded_file($post_image_temp,"../images/$post_image");
+    }
 
 ?>
 
@@ -28,7 +39,7 @@
     </div>
     <div class="form-group">
         <label for="post_category_id">Post Category</label>
-        <select name="" id="">
+        <select name="post_category" id="">
         
         <?php
             $query_for_edit = "SELECT * FROM categories";
@@ -55,7 +66,7 @@
     <div class="form-group">
         <label for="post_image">Post Image</label>
         <!-- <input type="file" class="form-control" name="image"> -->
-        <img width="100" src="../images/<?php echo $post_image; ?>" alt="image">
+        <img name='image' width="100" src="../images/<?php echo $post_image; ?>" alt="image">
     </div>
     <div class="form-group">
         <label for="post_tags">Post Tags</label>
@@ -68,7 +79,7 @@
     </div>
 
     <div class="form-group">
-        <input class="btn btn-primary" type="submit" name="create_post" value="Publish Post">
+        <input class="btn btn-primary" type="submit" name="update_post" value="Update Post">
     </div>
     
 </form>
