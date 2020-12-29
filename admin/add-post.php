@@ -154,7 +154,7 @@ while($result=mysqli_fetch_array($ret))
 <div class="col-sm-12">
  <div class="card-box">
 <h4 class="m-b-30 m-t-0 header-title"><b>Post Details</b></h4>
-<textarea class="form-control" name="postdescription" required></textarea>
+<textarea class="summernote" name="postdescription" required></textarea>
 </div>
 </div>
 </div>
